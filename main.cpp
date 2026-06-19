@@ -82,8 +82,10 @@ int main() {
 
     srand(time(0));
 
+    int operation;
+
     for (i = 0; i < STACK_SIZE * 100; i++) {
-        int operation = rand() % 3;
+        operation = rand() % 3;
 
         if (operation == 0) {
             stack.push(rand() % 1000);
