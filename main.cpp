@@ -40,5 +40,22 @@ int main() {
         std::cout << "SUCCESS: peek blocked on empty stack." << std::endl;
     }
 
+    std::cout << "\nTesting normal push operations." << std::endl;
+
+    std::cout << "Push 10: " << stack.push(10) << std::endl;
+    std::cout << "Push 20: " << stack.push(20) << std::endl;
+    std::cout << "Push 30: " << stack.push(30) << std::endl;
+
+    std::cout << "\nTesting peek." << std::endl;
+    std::cout << "Top value: " << stack.peek() << std::endl;
+
+    std::cout << "\nTesting pop operations." << std::endl;
+    std::cout << "Pop: " << stack.pop() << std::endl;
+    std::cout << "Pop: " << stack.pop() << std::endl;
+    std::cout << "Pop: " << stack.pop() << std::endl;
+
+    std::cout << "\nStack empty after pops: "
+              << stack.isEmpty() << std::endl;
+
     return 0;
 }
