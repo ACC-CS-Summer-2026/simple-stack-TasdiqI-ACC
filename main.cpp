@@ -22,5 +22,23 @@ int main() {
     std::cout << "New stack created." << std::endl;
     std::cout << "Stack empty: " << stack.isEmpty() << std::endl;
 
+    std::cout << "\nTesting underflow with pop." << std::endl;
+
+    try {
+        stack.pop();
+        std::cout << "ERROR: pop allowed on empty stack." << std::endl;
+    } catch (std::underflow_error &error) {
+        std::cout << "SUCCESS: pop blocked on empty stack." << std::endl;
+    }
+
+    std::cout << "\nTesting underflow with peek." << std::endl;
+
+    try {
+        stack.peek();
+        std::cout << "ERROR: peek allowed on empty stack." << std::endl;
+    } catch (std::underflow_error &error) {
+        std::cout << "SUCCESS: peek blocked on empty stack." << std::endl;
+    }
+
     return 0;
 }
