@@ -40,6 +40,8 @@ int main() {
         std::cout << "SUCCESS: peek blocked on empty stack." << std::endl;
     }
 
+
+
     std::cout << "\nTesting normal push operations." << std::endl;
 
     std::cout << "Push 10: " << stack.push(10) << std::endl;
@@ -56,6 +58,19 @@ int main() {
 
     std::cout << "\nStack empty after pops: "
               << stack.isEmpty() << std::endl;
+
+
+    std::cout << "\nTesting overflow." << std::endl;
+
+    int i;
+
+    for (i = 0; i < STACK_SIZE; i++) {
+        std::cout << "Push " << i << ": "
+                  << stack.push(i) << std::endl;
+    }
+
+    std::cout << "Overflow push: "
+              << stack.push(999) << std::endl;
 
     return 0;
 }
