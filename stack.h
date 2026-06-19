@@ -8,6 +8,8 @@
 #ifndef STACK_H
 #define STACK_H
 
+#include <stdexcept>
+
 #define STACK_SIZE 10
 
 class Stack {
