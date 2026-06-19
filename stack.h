@@ -5,3 +5,47 @@
 *           array-based integer stack ADT.
 ************************************************* */
 
+#ifndef STACK_H
+#define STACK_H
+
+#define STACK_SIZE 10
+
+class Stack {
+public:
+
+    /**********************
+    * Constructors/Destructor
+    ***********************/
+    Stack();
+
+    /**********************
+    * Getters/Accessors
+    ***********************/
+
+    /**********************
+    * Setters/Mutators
+    ***********************/
+
+    /**********************
+    * Printing Methods
+    ***********************/
+
+    /**********************
+    * Methods
+    ***********************/
+    bool push(int);
+    int pop();
+    int peek();
+    bool isEmpty();
+
+private:
+
+    /**********************
+    * Attributes
+    ***********************/
+    int stack[STACK_SIZE];
+    int top;
+
+};
+
+#endif //STACK_H
