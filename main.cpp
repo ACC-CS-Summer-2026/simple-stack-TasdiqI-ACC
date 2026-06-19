@@ -72,5 +72,10 @@ int main() {
     std::cout << "Overflow push: "
               << stack.push(999) << std::endl;
 
+    std::cout << "\nTesting operations while stack is full." << std::endl;
+    std::cout << "Peek full stack: " << stack.peek() << std::endl;
+    std::cout << "Pop full stack: " << stack.pop() << std::endl;
+    std::cout << "Push after one pop: " << stack.push(1000) << std::endl;
+
     return 0;
 }
