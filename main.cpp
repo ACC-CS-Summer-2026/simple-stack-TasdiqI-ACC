@@ -77,5 +77,34 @@ int main() {
     std::cout << "Pop full stack: " << stack.pop() << std::endl;
     std::cout << "Push after one pop: " << stack.push(1000) << std::endl;
 
+
+    std::cout << "\nRandom testing." << std::endl;
+
+    srand(time(0));
+
+    for (i = 0; i < STACK_SIZE * 100; i++) {
+        int operation = rand() % 3;
+
+        if (operation == 0) {
+            stack.push(rand() % 1000);
+        }
+        else if (operation == 1) {
+            try {
+                stack.pop();
+            }
+            catch (std::underflow_error &error) {
+            }
+        }
+        else {
+            try {
+                stack.peek();
+            }
+            catch (std::underflow_error &error) {
+            }
+        }
+    }
+
+    std::cout << "Random testing complete." << std::endl;
+
     return 0;
 }
