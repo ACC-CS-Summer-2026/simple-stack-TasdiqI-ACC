@@ -11,6 +11,7 @@
 #include <stdexcept>
 
 #define STACK_SIZE 10
+#define RANDOM_TEST_MULTIPLIER 100
 
 class Stack {
 public:

@@ -84,7 +84,7 @@ int main() {
 
     int operation;
 
-    for (i = 0; i < STACK_SIZE * 100; i++) {
+    for (i = 0; i < STACK_SIZE * RANDOM_TEST_MULTIPLIER; i++) {
         operation = rand() % 3;
 
         if (operation == 0) {
